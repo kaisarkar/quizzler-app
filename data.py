@@ -2,7 +2,7 @@ import requests
 
 response = requests.get(url="https://opentdb.com/api.php?amount=10&type=boolean")
 response.raise_for_status()
-data = response.json()
+data = response.json() # This creates HTML entity problem
 
 question_data = data["results"]
 # question_data = [
